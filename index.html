@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes Torrent BR - Filmes e Séries em HD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com Logo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>Filmes Torrent BR</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar filmes..." id="searchInput">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="acao.html" class="nav-link"><i class="fas fa-fist-raised"></i> Ação</a></li>
+                <li><a href="terror.html" class="nav-link"><i class="fas fa-ghost"></i> Terror</a></li>
+                <li><a href="comedia.html" class="nav-link"><i class="fas fa-laugh"></i> Comédia</a></li>
+                <li><a href="drama.html" class="nav-link"><i class="fas fa-heart"></i> Drama</a></li>
+                <li><a href="ficcao.html" class="nav-link"><i class="fas fa-rocket"></i> Ficção</a></li>
+                <li><a href="series.html" class="nav-link"><i class="fas fa-tv"></i> Séries</a></li>
+                <li><a href="top.html" class="nav-link"><i class="fas fa-star"></i> Top 10</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Filmes e Séries em HD</h2>
+            <p>Os melhores lançamentos com links de torrent rápidos e seguros</p>
+            <button class="cta-btn">Explorar Agora</button>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Banner de Apoio PIX -->
+    <section class="support-banner" id="supportBanner">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="support-text">
+                    <h3>Ajude a manter o site no ar! ❤️</h3>
+                    <p>Seu apoio faz toda a diferença para continuarmos trazendo os melhores filmes!</p>
+                </div>
+                <button class="pix-btn" onclick="showPixModal()">
+                    <i class="fas fa-pix"></i> Apoiar com PIX
+                </button>
+                <button class="close-support" onclick="closeSupportBanner()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal PIX -->
+    <div class="pix-modal" id="pixModal">
+        <div class="pix-modal-content">
+            <div class="pix-header">
+                <h3><i class="fas fa-pix"></i> PIX - Apoie o Filmes Torrent BR</h3>
+                <span class="close-modal" onclick="closePixModal()">&times;</span>
+            </div>
+            <div class="pix-body">
+                <div class="pix-qrcode">
+                    <img src="https://via.placeholder.com/250x250/11998e/ffffff?text=PIX+QR+CODE" alt="QR Code PIX">
+                </div>
+                <div class="pix-key">
+                    <div class="key-label">Chave PIX (CPF):</div>
+                    <div class="key-value">123.456.789-00</div>
+                    <div class="key-copy" onclick="copyPixKey()">
+                        <i class="fas fa-copy"></i> Copiar
+                    </div>
+                </div>
+                <div class="pix-values">
+                    <h4>Valores sugeridos:</h4>
+                    <div class="value-buttons">
+                        <button class="value-btn" data-value="5">R$ 5</button>
+                        <button class="value-btn" data-value="10">R$ 10</button>
+                        <button class="value-btn active" data-value="20">R$ 20</button>
+                        <button class="value-btn" data-value="50">R$ 50</button>
+                        <button class="value-btn" data-value="100">R$ 100</button>
+                    </div>
+                </div>
+                <p class="pix-message">
+                    Qualquer valor ajuda muito! 🙏<br>
+                    <strong>Obrigado pelo apoio!</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Movies -->
+    <section class="movies-section">
+        <div class="container">
+            <h2 class="section-title">Lançamentos da Semana</h2>
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Filmes serão carregados via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Filmes Torrent BR. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
