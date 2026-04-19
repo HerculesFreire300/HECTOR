@@ -1,136 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes Torrent BR - Filmes e Séries em HD</title>
+    <title>Solis Web | Sites Extraordinários</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header com Logo -->
-    <header class="header">
+
+    <header id="header">
         <div class="container">
-            <div class="logo">
-                <i class="fas fa-film"></i>
-                <h1>Filmes Torrent BR</h1>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Pesquisar filmes..." id="searchInput">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
+            <nav>
+                <div class="logo">
+                    SOLIS<span>WEB</span>
+                </div>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#depoimentos">Clientes</a></li>
+                    <li><a href="https://wa.me/5565993085010" target="_blank" class="btn-nav-cta">Orçamento</a></li>
+                </ul>
+
+                <div id="mobile-menu" class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
         </div>
+        <link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </header>
 
-    <!-- Barra de Navegação -->
-    <nav class="navbar">
+    <section class="hero" id="home">
         <div class="container">
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="acao.html" class="nav-link"><i class="fas fa-fist-raised"></i> Ação</a></li>
-                <li><a href="terror.html" class="nav-link"><i class="fas fa-ghost"></i> Terror</a></li>
-                <li><a href="comedia.html" class="nav-link"><i class="fas fa-laugh"></i> Comédia</a></li>
-                <li><a href="drama.html" class="nav-link"><i class="fas fa-heart"></i> Drama</a></li>
-                <li><a href="ficcao.html" class="nav-link"><i class="fas fa-rocket"></i> Ficção</a></li>
-                <li><a href="series.html" class="nav-link"><i class="fas fa-tv"></i> Séries</a></li>
-                <li><a href="top.html" class="nav-link"><i class="fas fa-star"></i> Top 10</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Filmes e Séries em HD</h2>
-            <p>Os melhores lançamentos com links de torrent rápidos e seguros</p>
-            <button class="cta-btn">Explorar Agora</button>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
-
-    <!-- Banner de Apoio PIX -->
-    <section class="support-banner" id="supportBanner">
-        <div class="container">
-            <div class="support-content">
-                <div class="support-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="support-text">
-                    <h3>Ajude a manter o site no ar! ❤️</h3>
-                    <p>Seu apoio faz toda a diferença para continuarmos trazendo os melhores filmes!</p>
-                </div>
-                <button class="pix-btn" onclick="showPixModal()">
-                    <i class="fas fa-pix"></i> Apoiar com PIX
-                </button>
-                <button class="close-support" onclick="closeSupportBanner()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal PIX -->
-    <div class="pix-modal" id="pixModal">
-        <div class="pix-modal-content">
-            <div class="pix-header">
-                <h3><i class="fas fa-pix"></i> PIX - Apoie o Filmes Torrent BR</h3>
-                <span class="close-modal" onclick="closePixModal()">&times;</span>
-            </div>
-            <div class="pix-body">
-                <div class="pix-qrcode">
-                    <img src="https://via.placeholder.com/250x250/11998e/ffffff?text=PIX+QR+CODE" alt="QR Code PIX">
-                </div>
-                <div class="pix-key">
-                    <div class="key-label">Chave PIX (CPF):</div>
-                    <div class="key-value">123.456.789-00</div>
-                    <div class="key-copy" onclick="copyPixKey()">
-                        <i class="fas fa-copy"></i> Copiar
-                    </div>
-                </div>
-                <div class="pix-values">
-                    <h4>Valores sugeridos:</h4>
-                    <div class="value-buttons">
-                        <button class="value-btn" data-value="5">R$ 5</button>
-                        <button class="value-btn" data-value="10">R$ 10</button>
-                        <button class="value-btn active" data-value="20">R$ 20</button>
-                        <button class="value-btn" data-value="50">R$ 50</button>
-                        <button class="value-btn" data-value="100">R$ 100</button>
-                    </div>
-                </div>
-                <p class="pix-message">
-                    Qualquer valor ajuda muito! 🙏<br>
-                    <strong>Obrigado pelo apoio!</strong>
+            <div class="hero-content">
+                <h1 class="reveal">
+                    Sua empresa merece um <br>
+                    <span class="highlight">site extraordinário.</span>
+                </h1>
+                
+                <p class="reveal delay-1">
+                    Interfaces modernas e focadas em converter visitantes <br> 
+                    em clientes reais de forma estratégica e profissional.
                 </p>
+                
+                <div class="hero-btns reveal delay-2">
+                    <a href="#servicos" class="btn-modern btn-primary-modern">
+                        Ver Serviços 
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/5565993085010" target="_blank" class="btn-modern btn-secondary-modern">
+    <i class="fab fa-whatsapp"></i>
+    Falar com Especialista
+</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2 class="section-title reveal">O que fazemos por você</h2>
+            
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="icon-box">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas de alta conversão desenhadas para vender seu produto ou serviço 24h por dia.</p>
+                </div>
+
+                <div class="service-card reveal delay-1">
+                    <div class="icon-box">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Lojas virtuais completas, seguras e otimizadas para a melhor experiência de compra.</p>
+                </div>
+
+                <div class="service-card reveal delay-2">
+                    <div class="icon-box">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>SEO & Performance</h3>
+                    <p>Garantimos que seu site seja rápido e encontrado pelo Google nos primeiros resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title reveal">Nosso Portfólio</h2>
+            <div class="image-container reveal">
+                <img src="imagemcompleta2.PNG" class="interactive-img" alt="Demonstração de Portfólio Solis Web">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <h2 class="section-title reveal">Quem confia na Solis</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"O design é impecável e a velocidade impressiona. Transformou nosso negócio!"</p>
+                    <div class="client-info">
+                        <h4>Ricardo Souza</h4>
+                        <span>CEO RS Consultoria</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-1">
+                    <div class="stars">★★★★★</div>
+                    <p>"Suporte e atenção aos detalhes nota 10. Superaram todas as expectativas."</p>
+                    <div class="client-info">
+                        <h4>Amanda Oliveira</h4>
+                        <span>Marketing Digital</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-2">
+                    <div class="stars">★★★★★</div>
+                    <p>"Minha conversão aumentou 40% com a nova Landing Page. Trabalho estratégico."</p>
+                    <div class="client-info">
+                        <h4>Dr. Marcos Vinícius</h4>
+                        <span>Clínica Integrada</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"O sistema de agendamento facilitou muito a vida dos pacientes. Incrível!"</p>
+                    <div class="client-info">
+                        <h4>Dra. Julia Costa</h4>
+                        <span>Psicóloga</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-1">
+                    <div class="stars">★★★★★</div>
+                    <p>"Processo ágil e transparente. Entenderam a essência da minha marca."</p>
+                    <div class="client-info">
+                        <h4>Lucas Mantovani</h4>
+                        <span>Arquiteto</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-2">
+                    <div class="stars">★★★★★</div>
+                    <p>"Site leve, rápido e já estamos na primeira página do Google. Recomendo!"</p>
+                    <div class="client-info">
+                        <h4>Fernanda Lima</h4>
+                        <span>E-commerce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Pronto para elevar o nível?</h2>
+                <p>Receba um orçamento personalizado hoje mesmo e <strong>domine o seu mercado</strong> com um site de alta performance.</p>
+                
+                <a href="https://wa.me/5565993085010" target="_blank" class="btn-solis-premium">
+                    <i class="fab fa-whatsapp"></i>
+                    SOLICITAR MEU ORÇAMENTO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modern-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">SOLIS<span>WEB</span></div>
+                <p>Transformamos sua presença digital com interfaces de alto padrão e estratégias focadas em conversão.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Soluções</h4>
+                <ul>
+                    <li><a href="#">Landing Pages</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Institucional</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contato@solisweb.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cuiabá, MT</li>
+                    <li><i class="fab fa-whatsapp"></i> (65) 99308-5010</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr. Celso Sol | Solis Web Design. Todos os direitos reservados.</p>
         </div>
     </div>
+</footer>
 
-    <!-- Featured Movies -->
-    <section class="movies-section">
-        <div class="container">
-            <h2 class="section-title">Lançamentos da Semana</h2>
-            <div class="movies-grid" id="moviesGrid">
-                <!-- Filmes serão carregados via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Filmes Torrent BR. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
+    <a href="https://wa.me/5565993085010" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
